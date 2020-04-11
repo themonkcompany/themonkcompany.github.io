@@ -1,166 +1,21 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+---
+layout: default
+title: Home
+---
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Posts Index
+================================================== -->
+<div class="blog-grid-container">
+    {% for post in paginator.posts %}
+        {% include postbox.html %}
+    {% endfor %}
+</div>
 
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2:400,500,600,700,800&display=swap" rel="stylesheet">
+<!-- Pagination
+================================================== -->
+<div class="bottompagination">
+<span class="navigation" role="navigation">
+    {% include pagination.html %}
+</span>
+</div>
 
-    <!-- icons -->
-    <link href="fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
-
-    <title>themonkcompany</title>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <div class="mt-5">
-            <h5 class="ml-3" style="font-family: 'Baloo Thambi 2', cursive;">themonkcompany</h5>
-            <div class="container-fluid text-center mt-5">
-              <img class="mb-3 mt-5" src="logo.png" style="max-width:100px;max-height: 100px;">
-              <h3 class="mt-3 mb-3" style="font-family: 'Baloo Thambi 2', cursive;">themonkcompany</h3>
-              <p style="font-family: 'Baloo Thambi 2', cursive;">Hello, myname is the monk.<br>I write about travel, adventure, life and more</p>
-              <div class="row mt-4 mb-4">
-                <i style="font-size: 1.5em; color: black;" class="fab fa-instagram col"></i>
-                <i style="font-size: 1.5em; color: black;" class="fab fa-twitter col"></i>
-                <i style="font-size: 1.5em; color: black;" class="fab fa-medium-m col"></i>
-                <i style="font-size: 1.5em; color: black;" class="fab fa-facebook-square col"></i>
-                <i style="font-size: 1.5em; color: black;"  class="fas fa-envelope col"></i>
-              </div>
-            </div>
-            <div class="container-fluid text-center mt-5" style="font-family: 'Baloo Thambi 2', cursive;">
-              <h3 class="mb-4">Categories</h3>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Travel</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Education</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Life</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Global Warming</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Agriculture & Farming</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Daily Knowledge</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Trading</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">Technology</button>
-              <button type="button" class="btn btn-dark btn-sm mb-2">More Topics</button>  
-            </div>
-            <div class="container-fluid text-center mt-1" style="font-family: 'Baloo Thambi 2', cursive;">
-              <button type="button" class="btn btn-outline-dark btn-sm mb-2">About The Monk</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" style="background-color:black;font-family: 'Baloo Thambi 2', cursive; height: 100vh; overflow: auto;">
-          <h1 class="mt-3 mb-3" style="font-family: 'Baloo Thambi 2', cursive; color: white;">Trending</h1>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static" style="background: white;">
-              <strong class="d-inline-block mb-2 text-black">World</strong>
-              <h3 class="mb-0">Featured post</h3>
-              <div class="mb-1 text-muted">Nov 12</div>
-              <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="stretched-link">Continue reading</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
-</html>
